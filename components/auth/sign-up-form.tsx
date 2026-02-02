@@ -600,9 +600,12 @@ export function SignUpForm() {
         setError(authError.message);
         setIsLoading(false);
         // Reset CAPTCHA on error
-        if (captchaInstanceRef.current) {
-          captchaInstanceRef.current.reset();
-        }
+        // if (captchaInstanceRef.current) {
+        //   captchaInstanceRef.current.reset();
+        // }
+         if (window.hcaptcha && captchaInstanceRef.current !== null) {
+           window.hcaptcha.reset(captchaInstanceRef.current)
+       }
         setCaptchaToken(null);
         return;
       }
@@ -613,9 +616,12 @@ export function SignUpForm() {
       setError("An unexpected error occurred. Please try again.");
       setIsLoading(false);
       // Reset CAPTCHA on error
-      if (captchaInstanceRef.current) {
-        captchaInstanceRef.current.reset();
-      }
+      // if (captchaInstanceRef.current) {
+      //   captchaInstanceRef.current.reset();
+      // }
+       if (window.hcaptcha && captchaInstanceRef.current !== null) {
+    window.hcaptcha.reset(captchaInstanceRef.current)
+  }
       setCaptchaToken(null);
     }
   }
