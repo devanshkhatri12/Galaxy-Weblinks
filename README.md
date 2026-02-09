@@ -1,3 +1,8 @@
+# NOTICE ⚠️
+
+This project is being paused due to extra used of computational cloud resources. if their any query kindly contact the developer.
+
+
 # 🚀 Full Stack User Management System
 
 A complete full-stack web application built using **Next.js**, **Tailwind CSS**, **ShadCN**, and **PostgreSQL**.  
